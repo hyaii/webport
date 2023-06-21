@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YeHee</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://kit.fontawesome.com/d778b455ac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="header">
+        <h1>YeHee's WEB Portfolio</h1>
+        <p>yxhyas2@gmail.com</p>
+    </div>
+
+
+    <section class="main">
+        <div class="top">
+            <h3>Hello</h3>                  
+        </div>
+    </section>
+
+    <div class="blog-part">
+        <marquee width="100%" direction="left" scrolldelay="-10">
+         <span>But I have raised you up for this very
+            purpose, that I might show you my power
+             and that my name might be proclaimed in all the earth
+         </span>        
+        </marquee>
+       </div>
+       <!-- marquee : 움직이는 태그 -->
+    <!-- loop -->
+
+    <div class="btns_menu">
+        <button class="btn home"><i class="fa-solid fa-star"></i></button>
+        <button class="btn about"><i class="fa-solid fa-pen-nib"></i></button>
+        <button class="btn skills"><i class="fa-solid fa-file-contract"></i></button>
+        <button class="btn works"><i class="fa-solid fa-cube"></i></button>
+        <button class="btn mokup"><i class="fa-solid fa-compact-disc"></i></button>
+    </div>
+    <!-- 버튼 -->
+
+    <section id="home">
+    <section class="section scroll-spy">
+        <div class="container">
+            <h1>Goods</h1>
+            <!-- <div class="box back-to-position to-right delay-0"></div> -->
+            <div class="box back-to-position to-left delay-1"><img src="img/ㄹㅇ이거.jpg" alt=""></div>
+        </div>
+    </section>
+    </section>
+    <!-- home -->
+
+    <section id="about">
+    <section class="section scroll-spy">
+        <div class="container">
+            <h1>Vector</h1>
+            <!-- <div class="box back-to-position to-right delay-0"></div> -->
+            <div class="box back-to-position to-left delay-1"><img src="img/v1.png" alt=""></div>
+        </div>
+    </section>
+    </section>
+    <!-- about -->
+            
+    <section id="skills">
+    <section class="section scroll-spy">
+        <div class="container">
+            <h1>Poster</h1>
+            <div class="box back-to-position to-right delay-0"><img src="img/p2.gif" alt=""></div>
+            <div class="box back-to-position to-left delay-1"><img src="img/p1.png" alt=""></div>
+        </div>
+    </section>
+    </section>
+    <!-- skills -->
+
+    <section id="works">
+    <section class="section scroll-spy">
+        <div class="container">
+            <h1>Package</h1>
+            <div class="box back-to-position to-right delay-0"><img src="img/패키지 목업1.png" alt=""></div>
+            <div class="box back-to-position to-left delay-1"><img src="img/패키지 목업2.png" alt=""></div>
+        </div>
+    </section>
+    </section>
+    <!-- works -->
+
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+   <section id="mokup">
+        <section class="section scroll-spy">
+        <div class="swiper mySwiper">
+              
+                <div class="swiper-wrapper">
+                
+                    <div class="swiper-slide">
+                        <div class="imgbox">
+                            <a href="https://youtu.be/64DtWBXjU2Y" style="cursor: move;"><img src="img/스탑더레인.png"></a>
+                        </div>
+                        <div class="detail">
+                            <h3>Day6</h3> <h4>♬ Stop the rain ♬</h4> <br> <p>流れる涙も雨と一緒に <br> 消えていく</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="imgbox">
+                            <a href="https://youtu.be/Tct9c4MrmMA" style="cursor: move;"><img src="img/체크인목업.png"></a>
+                        </div>
+                        <div class="detail">
+                            <h3>SEVENTEEN</h3> <h4>♬ Check In ♬</h4> <p> Check in Seoul City <br>Check in Singapore City </p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="imgbox">
+                            <a href="https://youtu.be/xSwJGduvM_g" style="cursor: move;"><img src="img/더필링목업.png"></a>
+                        </div>
+                        <div class="detail">
+                            <h3>SHINee</h3> <h4>♬ The Feeling ♬</h4><p> I wanna feel it <br> I wanna feel again</p>
+                        </div>
+                    </div>
+                  
+            </section>
+        </section>
+          
+
+     
+
+
+
+      
+    <button class="arrow-up"> ^ </button>
+    <!-- 화살표 -->
+ 
+
+    <!-- script -->
+    <script>
+        const spyEls = document.querySelectorAll('section.scroll-spy')
+        const controller = new ScrollMagic.Controller();
+
+        spyEls.forEach(function(spyEl){
+            new ScrollMagic
+                .Scene({triggerElement : spyEl})
+                .setClassToggle(spyEl, 'show')
+                .addTo(controller);
+        })
+    </script>
+
+<script>
+    const btnHome = document.querySelector('.home');
+    const sectionHome = document.querySelector('#home');
+    
+    btnHome.addEventListener('click', function(){
+        sectionHome.scrollIntoView({behavior:"smooth", block:"center"})
+    })   // 중괄호는 함수블록
+
+    const btnAbout = document.querySelector('.about');
+    const sectionAbout = document.querySelector('#about');
+    
+    btnAbout.addEventListener('click', function(){
+        sectionAbout.scrollIntoView({behavior:"smooth", block:"start"})
+    }) 
+    // about
+
+    const btnSkills = document.querySelector('.skills');
+    const sectionSkills = document.querySelector('#skills');
+    
+    btnSkills.addEventListener('click', function(){
+        sectionSkills.scrollIntoView({behavior:"smooth", block:"center"})
+    })
+    // skills
+
+    const btnWorks = document.querySelector('.works');
+    const sectionWorks = document.querySelector('#works');
+    
+    btnWorks.addEventListener('click', function(){
+        sectionWorks.scrollIntoView({behavior:"smooth", block:"center"})
+    })
+    // works
+
+    const btnMokup = document.querySelector('.mokup');
+    const sectionMokup = document.querySelector('#mokup');
+    
+    btnMokup.addEventListener('click', function(){
+        sectionMokup.scrollIntoView({behavior:"smooth", block:"center"})
+    })
+    // mokup
+
+    const arrowUp = document.querySelector('.arrow-up')
+        document.addEventListener('scroll', function() {
+            // console.log(window.scrollY); 스크롤 수치값 확인
+            if(window.scrollY > 300) {
+                arrowUp.classList.add('show');
+            }    else {
+                    arrowUp.classList.remove('show');
+                }
+             })
+
+        const btnarrowUp = document.querySelector('.arrow-up');
+        const sectionarrowUp = document.querySelector('.main');
+        
+        btnarrowUp.addEventListener('click', function(){
+        sectionarrowUp.scrollIntoView({behavior:"smooth", block:"center"})
+        })
+        // arrow-up
+
+
+    
+</script>
+
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+              rotate: 50,
+              stretch: 0,
+              depth: 200,
+              modifier: 1,
+              slideShadows: true,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+            },
+          });
+        </script>
+</body>
+</html>
